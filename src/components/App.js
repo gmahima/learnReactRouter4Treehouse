@@ -5,6 +5,7 @@ import Header from "./Header";
 import About from "./About";
 import Courses from "./Courses";
 import Teachers from "./Teachers";
+import Featured from "./Featured";
 import NotFound from "./NotFound";
 const App = () => (
   <BrowserRouter>
@@ -13,7 +14,8 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/courses" component={Courses} />
-        <Route path="/teachers" component={() => <Teachers />} />
+        <Route exact path="/teachers" component={Teachers} />
+        <Route path="/teachers/:course/:name" component={Featured} />
         <Route path="/about" render={() => <About title="About this site" />} />
         <Route render={() => <NotFound />} />
       </Switch>
