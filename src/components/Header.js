@@ -18,9 +18,7 @@ const Header = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/teachers" activeClassName="activeMcActiveFace">
-          Teachers
-        </NavLink>
+        <NavLink to="/teachers">Teachers</NavLink>
       </li>
       <li>
         <NavLink to="/courses">Courses</NavLink>
