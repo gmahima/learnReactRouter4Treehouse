@@ -10,8 +10,8 @@ const App = () => (
     <div className="container">
       <Header />
       <Route exact path="/" render={() => <Home />} />
-      <Route exact path="/courses" render={() => <Courses />} />
-      <Route exact path="/teachers" component={() => <Teachers />} />
+      <Route path="/courses" render={() => <Courses />} />
+      <Route path="/teachers" component={() => <Teachers />} />
       <Route path="/about" render={() => <About title="About this site" />} />
     </div>
   </BrowserRouter>
