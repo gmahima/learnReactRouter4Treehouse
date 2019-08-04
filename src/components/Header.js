@@ -13,10 +13,14 @@ const Header = () => (
         </NavLink>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/about" activeStyle={{ background: "tomato" }}>
+          About
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/teachers">Teachers</NavLink>
+        <NavLink to="/teachers" activeClassName="activeMcActiveFace">
+          Teachers
+        </NavLink>
       </li>
       <li>
         <NavLink to="/courses">Courses</NavLink>
