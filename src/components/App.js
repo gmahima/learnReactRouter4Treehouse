@@ -3,11 +3,15 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./Home";
 import Header from "./Header";
 import About from "./About";
+import Courses from "./Courses";
+import Teachers from "./Teachers";
 const App = () => (
   <BrowserRouter>
     <div className="container">
       <Header />
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" render={() => <Home />} />
+      <Route exact path="/courses" render={() => <Courses />} />
+      <Route exact path="/teachers" component={() => <Teachers />} />
       <Route path="/about" render={() => <About title="About this site" />} />
     </div>
   </BrowserRouter>
