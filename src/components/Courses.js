@@ -1,10 +1,10 @@
 import React from "react";
-import { Route, NavLink } from "react-router-dom";
+import { Route, NavLink, Redirect } from "react-router-dom";
 import HTML from "./courses/HTML";
 import CSS from "./courses/CSS";
 import JavaScript from "./courses/JavaScript";
 
-const Courses = () => (
+const Courses = ({ match }) => (
   <div className="main-content courses">
     <div className="course-header group">
       <h2>Courses</h2>
@@ -21,10 +21,16 @@ const Courses = () => (
       </ul>
     </div>
 
-    {/* Write routes here... */}
+    {console.log(match)}
+
+    <Route
+      exact
+      path="/courses"
+      render={() => <Redirect to="/courses/html" />}
+    />
     <Route path="/courses/html" render={() => <HTML />} />
     <Route path="/courses/css" render={() => <CSS />} />
-    <Route path="/courses/js" render={() => <JavaScript />} />
+    <Route path="/courses/javascript" render={() => <JavaScript />} />
   </div>
 );
 
