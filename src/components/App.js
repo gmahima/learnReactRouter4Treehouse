@@ -15,7 +15,7 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route path="/courses" component={Courses} />
         <Route exact path="/teachers" component={Teachers} />
-        <Route path="/teachers/:course/:name" component={Featured} />
+        <Route path="/teachers/:course/:fname-:lname" component={Featured} />
         <Route path="/about" render={() => <About title="About this site" />} />
         <Route render={() => <NotFound />} />
       </Switch>
